@@ -1,6 +1,6 @@
 "use client";
 
-import { faPlus } from "@fortawesome/free-solid-svg-icons";
+import { faCheck, faPlus, faTimes } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { ethers } from "ethers";
 import Image from "next/image";
@@ -423,6 +423,14 @@ const AllCampaigns = () => {
                           className="border bg-opacity-75 bg-white rounded-lg p-4 shadow-md hover:shadow-lg transition-shadow duration-300 ease-in-out"
                           key={campaign.id}
                         >
+                          <div className="flex mb-4 flex-row justify-between">
+                            <button className="bg-red-500 rounded-full p-3">
+                              <FontAwesomeIcon icon={faTimes} color="#fff" />
+                            </button>
+                            <button className="bg-green-500 rounded-full p-3">
+                              <FontAwesomeIcon icon={faCheck} color="#fff" />
+                            </button>
+                          </div>
                           <Image
                             src={campaign.images}
                             alt={campaign.title}

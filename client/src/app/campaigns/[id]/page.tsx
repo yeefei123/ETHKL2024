@@ -578,11 +578,11 @@ const CampaignDetails: React.FC = () => {
       <div className="bg-white shadow-lg rounded-lg p-6">
         <div className="flex flex-row justify-between">
           <button
-            disabled={!currentMilestone}
-            className={`bg-blue-500 text-white p-2 rounded-xl ${
-              !currentMilestone
-                ? "bg-gray-500 cursor-not-allowed"
-                : "hover:bg-blue-700"
+            disabled={!currentMilestone || !userId}
+            className={` text-white p-2 rounded-xl ${
+              !currentMilestone || !userId
+                ? "bg-red-400 cursor-not-allowed"
+                : "bg-blue-500 hover:bg-blue-700"
             }`}
             onClick={() => setIsReportDialogOpen(true)}
           >

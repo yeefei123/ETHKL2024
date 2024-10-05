@@ -4,7 +4,7 @@ import { ethers } from "ethers";
 import { useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
 import Web3Modal from "web3modal";
-import Crowdfunding from "../../abi/Crowdfunding.json";
+import Crowdfunding from "../../abi/Crowdfunding2.json";
 
 const web3Modal = new Web3Modal({
   cacheProvider: true,
