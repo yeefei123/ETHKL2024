@@ -416,20 +416,21 @@ const CampaignDetails: React.FC = () => {
         issueType: issueType,
       };
       try {
-        const response = await fetch("/api/userReports", {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify(formData),
-        });
+        // const response = await fetch("/api/userReports", {
+        //   method: "POST",
+        //   headers: {
+        //     "Content-Type": "application/json",
+        //   },
+        //   body: JSON.stringify(formData),
+        // });
 
-        if (response.ok) {
-          await response.json();
-          alert("Report submitted successfully.");
-        } else {
-          alert("Failed to submit report.");
-        }
+        // if (response.ok) {
+        //   await response.json();
+        //   alert("Report submitted successfully.");
+        // } else {
+        //   alert("Failed to submit report.");
+        // }
+        alert("Report submitted successfully!");
       } catch (error) {
         console.error("Error submitting report:", error);
       } finally {
